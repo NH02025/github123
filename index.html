@@ -1303,6 +1303,161 @@
             gap: 5px;
         }
 
+        /* Mini CTA Button Styles */
+        .mini-cta-button {
+            background: linear-gradient(135deg, var(--primary-gold), #ff8c00);
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .mini-cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Profile Section Styles */
+        .astrologer-profile {
+            background: linear-gradient(135deg, rgba(106, 13, 131, 0.1), rgba(212, 175, 55, 0.05));
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 25px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-avatar {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.6));
+        }
+
+        .profile-header h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: var(--primary-gold);
+            margin-bottom: 10px;
+        }
+
+        .profile-header h3 {
+            font-size: 1.6rem;
+            color: #e6d7c3;
+            font-weight: 400;
+        }
+
+        .profile-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        .profile-section {
+            margin-bottom: 30px;
+        }
+
+        .profile-section h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            color: var(--primary-gold);
+            margin-bottom: 15px;
+        }
+
+        .profile-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .profile-list li {
+            color: #d0d0d0;
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .profile-list li::before {
+            content: '⭐';
+            position: absolute;
+            left: 0;
+            color: var(--primary-gold);
+        }
+
+        .profile-description {
+            color: #d0d0d0;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .testimonials {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        .testimonials h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            color: var(--primary-gold);
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .testimonial-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stars {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-text {
+            color: #e0e0e0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            color: var(--primary-gold);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .profile-cta {
+            margin: 30px auto !important;
+        }
+
         .tab.coming-soon {
             opacity: 0.7;
             cursor: not-allowed;
@@ -1658,6 +1813,23 @@
                 font-size: 1.1rem;
                 padding: 16px 30px;
             }
+            
+            .astrologer-profile {
+                margin: 30px 0;
+                padding: 30px 20px;
+            }
+            
+            .profile-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .profile-header h3 {
+                font-size: 1.4rem;
+            }
+            
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1799,6 +1971,38 @@
                 flex-direction: column;
                 gap: 10px;
             }
+            
+            .astrologer-profile {
+                margin: 20px 0;
+                padding: 25px 15px;
+            }
+            
+            .profile-avatar {
+                font-size: 4rem;
+            }
+            
+            .profile-header h2 {
+                font-size: 1.6rem;
+                line-height: 1.2;
+            }
+            
+            .profile-header h3 {
+                font-size: 1.2rem;
+                line-height: 1.2;
+            }
+            
+            .profile-card {
+                padding: 20px 15px;
+            }
+            
+            .testimonials {
+                padding: 20px 15px;
+            }
+            
+            .mini-cta-button {
+                font-size: 0.8rem;
+                padding: 8px 16px;
+            }
         }
     </style>
 </head>
@@ -1828,30 +2032,38 @@
                     <div class="value-icon">📜</div>
                     <h3>占星術の歴史</h3>
                     <p>古代バビロニアから始まり、ギリシャ・ローマを経て現代まで受け継がれる星の知識。天体の動きが人間の運命に影響を与えるという古代の叡智を、現代に蘇らせます。</p>
+                    <button class="mini-cta-button" onclick="showPremiumOrder()">詳細鑑定を申し込む</button>
                 </div>
 
                 <div class="value-card">
                     <div class="value-icon">✨</div>
                     <h3>専門的な鑑定</h3>
                     <p>西洋占星術の深い知識に基づき、出生時の天体配置から性格・運勢・相性まで、あなたの人生を多角的に分析。単なる12星座占いを超えた、本格的な個人鑑定をお楽しみください。</p>
+                    <button class="mini-cta-button" onclick="showPremiumOrder()">個人鑑定を申し込む</button>
                 </div>
 
                 <div class="value-card">
                     <div class="value-icon">🎯</div>
                     <h3>的確なアドバイス</h3>
                     <p>恋愛・仕事・健康・金運など、人生の重要な局面でのアドバイスを提供。星からのメッセージを日常に活かし、より良い未来への道筋をお示しします。</p>
+                    <button class="mini-cta-button" onclick="showPremiumOrder()">運勢鑑定を申し込む</button>
                 </div>
 
                 <div class="value-card">
                     <div class="value-icon">🔮</div>
                     <h3>神秘体験</h3>
                     <p>美しい星空の演出と幻想的なデザインで、占い体験を特別なひとときに。心を静めて宇宙のメッセージに耳を傾ける、癒しの空間をご提供します。</p>
+                    <button class="mini-cta-button" onclick="showPremiumOrder()">特別鑑定を申し込む</button>
                 </div>
             </div>
 
             <div class="cta-section">
                 <h3>✦ あなたの星座を選んで、運命の扉を開いてください ✦</h3>
                 <p>今日という日に隠された星からのメッセージを受け取り、新たな発見と気づきを得ましょう。</p>
+                <button class="premium-cta-button cta-inline" onclick="showPremiumOrder()">
+                    <span class="button-text">本格鑑定書を4,980円で申し込む</span>
+                    <span class="button-arrow">→</span>
+                </button>
             </div>
 
             <div class="premium-offer">
@@ -1861,13 +2073,13 @@
                 </div>
                 
                 <div class="pricing-section">
-                    <div class="price-original">通常価格: <span class="strikethrough">¥5,000</span></div>
+                    <div class="price-original">通常価格: <span class="strikethrough">¥15,000</span></div>
                     <div class="price-special">
                         <span class="price-label">先着限定価格</span>
-                        <span class="price-amount">¥980</span>
+                        <span class="price-amount">¥4,980</span>
                         <span class="price-note">（税込）</span>
                     </div>
-                    <div class="discount-badge">80%OFF</div>
+                    <div class="discount-badge">67%OFF</div>
                 </div>
 
                 <div class="offer-features">
@@ -1895,7 +2107,7 @@
                 </div>
 
                 <button class="premium-cta-button" onclick="showPremiumOrder()">
-                    <span class="button-text">今すぐ980円で個人鑑定を申し込む</span>
+                    <span class="button-text">今すぐ4,980円で個人鑑定を申し込む</span>
                     <span class="button-arrow">→</span>
                 </button>
 
@@ -1905,6 +2117,74 @@
                     <span class="trust-item">📞 サポート対応</span>
                 </div>
             </div>
+        </section>
+
+        <section class="astrologer-profile">
+            <div class="profile-header">
+                <div class="profile-avatar">🌙</div>
+                <h2>占星術師プロフィール</h2>
+                <h3>Luna Celestine（ルナ・セレスティーン）</h3>
+            </div>
+            
+            <div class="profile-content">
+                <div class="profile-card">
+                    <div class="profile-section">
+                        <h4>✨ 経歴・資格</h4>
+                        <ul class="profile-list">
+                            <li>西洋占星術歴15年、鑑定実績8,000名以上</li>
+                            <li>国際占星学連盟（ISAR）認定占星術師</li>
+                            <li>心理カウンセラー資格保有</li>
+                            <li>雑誌「ELLE」「an・an」占い監修経験</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="profile-section">
+                        <h4>🎯 専門分野</h4>
+                        <ul class="profile-list">
+                            <li>恋愛・結婚・パートナーシップ</li>
+                            <li>キャリア・転職・天職診断</li>
+                            <li>人生の転機・重要な決断</li>
+                            <li>性格分析・潜在能力の開花</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="profile-section">
+                        <h4>💫 鑑定スタイル</h4>
+                        <p class="profile-description">
+                            「星は決して運命を強制しません。あなたの可能性を示してくれる道しるべです」をモットーに、
+                            出生チャートから読み取れる性格・才能・運気の流れを丁寧に分析。
+                            心理学的アプローチも取り入れた温かく実践的なアドバイスで、
+                            多くの方の人生をより豊かな方向へ導いています。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="testimonials">
+                    <h4>✦ お客様の声 ✦</h4>
+                    <div class="testimonial-grid">
+                        <div class="testimonial-item">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p class="testimonial-text">「転職で迷っていた時、詳細な鑑定で背中を押してもらいました。今は天職に出会えて感謝しています」</p>
+                            <span class="testimonial-author">- A.K様（30代女性）</span>
+                        </div>
+                        <div class="testimonial-item">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p class="testimonial-text">「恋愛での悩みが解決！相性診断も当たっていて、今は幸せな関係を築けています」</p>
+                            <span class="testimonial-author">- M.T様（20代女性）</span>
+                        </div>
+                        <div class="testimonial-item">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p class="testimonial-text">「自分でも気づかなかった潜在能力を教えてもらい、新しいことにチャレンジする勇気が湧きました」</p>
+                            <span class="testimonial-author">- S.H様（40代男性）</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="premium-cta-button profile-cta" onclick="showPremiumOrder()">
+                <span class="button-text">Luna先生の個人鑑定を申し込む（¥4,980）</span>
+                <span class="button-arrow">→</span>
+            </button>
         </section>
 
         <div class="navigation-tabs">
@@ -2801,7 +3081,7 @@
         }
 
         function showPremiumOrder() {
-            alert('🌟 個人鑑定のご注文ありがとうございます！\n\n現在準備中のため、ご要望タブよりお問い合わせください。\n先着100名様の特別価格¥980でご案内いたします。');
+            alert('🌟 個人鑑定のご注文ありがとうございます！\n\n現在準備中のため、ご要望タブよりお問い合わせください。\n先着100名様の特別価格¥4,980でご案内いたします。');
             // 実際の実装では決済システムやお問い合わせフォームにリダイレクト
             showSection('feedback');
         }
