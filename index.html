@@ -930,6 +930,159 @@
             animation: pulse 2s infinite;
         }
 
+        /* Introduction Section Styles */
+        .intro-section {
+            margin: 40px 0;
+            padding: 0 20px;
+        }
+
+        .intro-card {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(106, 13, 131, 0.1));
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 25px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .intro-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6));
+            position: relative;
+            z-index: 2;
+        }
+
+        .intro-card h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary-gold);
+            margin-bottom: 20px;
+            line-height: 1.3;
+            position: relative;
+            z-index: 2;
+        }
+
+        .intro-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #e6d7c3;
+            position: relative;
+            z-index: 2;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .value-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2);
+            border-color: rgba(212, 175, 55, 0.5);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.4));
+        }
+
+        .value-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary-gold);
+            margin-bottom: 15px;
+        }
+
+        .value-card p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #d0d0d0;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, rgba(106, 13, 131, 0.15), rgba(212, 175, 55, 0.1));
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            border-radius: 25px;
+            padding: 35px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            animation: shine 3s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes shine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .cta-section h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--primary-gold);
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-section p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #e6d7c3;
+            position: relative;
+            z-index: 2;
+        }
+
         .tab.coming-soon {
             opacity: 0.7;
             cursor: not-allowed;
@@ -1230,6 +1383,36 @@
             .fortune-card {
                 padding: 25px;
             }
+            
+            .intro-section {
+                margin: 30px 0;
+                padding: 0 15px;
+            }
+            
+            .intro-card {
+                padding: 30px 25px;
+            }
+            
+            .intro-card h2 {
+                font-size: 1.6rem;
+            }
+            
+            .value-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .value-card {
+                padding: 25px 20px;
+            }
+            
+            .cta-section {
+                padding: 25px 20px;
+            }
+            
+            .cta-section h3 {
+                font-size: 1.4rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1282,6 +1465,53 @@
                 font-size: 0.7rem;
                 padding: 3px 10px;
             }
+            
+            .intro-section {
+                margin: 25px 0;
+                padding: 0 10px;
+            }
+            
+            .intro-card {
+                padding: 25px 20px;
+            }
+            
+            .intro-card h2 {
+                font-size: 1.4rem;
+                line-height: 1.2;
+            }
+            
+            .intro-card p {
+                font-size: 1rem;
+            }
+            
+            .intro-icon {
+                font-size: 3rem;
+            }
+            
+            .value-card {
+                padding: 20px 15px;
+            }
+            
+            .value-card h3 {
+                font-size: 1.2rem;
+            }
+            
+            .value-card p {
+                font-size: 0.9rem;
+            }
+            
+            .cta-section {
+                padding: 20px 15px;
+            }
+            
+            .cta-section h3 {
+                font-size: 1.3rem;
+                line-height: 1.2;
+            }
+            
+            .cta-section p {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -1298,6 +1528,45 @@
         <div class="beta-notice">
             🚀 <strong>BETA版</strong> - 現在サービス構築中です。皆様のご意見をお聞かせください！
         </div>
+
+        <section class="intro-section">
+            <div class="intro-card">
+                <div class="intro-icon">🌟</div>
+                <h2>古代の叡智と現代のテクノロジーが融合した、本格的な占星術体験</h2>
+                <p>5000年の歴史を持つ占星術の神秘的な力を、最新のAI技術と組み合わせて、あなただけの特別な運勢をお届けします。</p>
+            </div>
+
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon">📜</div>
+                    <h3>占星術の歴史</h3>
+                    <p>古代バビロニアから始まり、ギリシャ・ローマを経て現代まで受け継がれる星の知識。天体の動きが人間の運命に影響を与えるという古代の叡智を、現代に蘇らせます。</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">✨</div>
+                    <h3>専門的な鑑定</h3>
+                    <p>西洋占星術の深い知識に基づき、出生時の天体配置から性格・運勢・相性まで、あなたの人生を多角的に分析。単なる12星座占いを超えた、本格的な個人鑑定をお楽しみください。</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3>的確なアドバイス</h3>
+                    <p>恋愛・仕事・健康・金運など、人生の重要な局面でのアドバイスを提供。星からのメッセージを日常に活かし、より良い未来への道筋をお示しします。</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🔮</div>
+                    <h3>神秘体験</h3>
+                    <p>美しい星空の演出と幻想的なデザインで、占い体験を特別なひとときに。心を静めて宇宙のメッセージに耳を傾ける、癒しの空間をご提供します。</p>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h3>✦ あなたの星座を選んで、運命の扉を開いてください ✦</h3>
+                <p>今日という日に隠された星からのメッセージを受け取り、新たな発見と気づきを得ましょう。</p>
+            </div>
+        </section>
 
         <div class="navigation-tabs">
             <div class="tab active" data-section="basic">✨ 無料占い</div>
