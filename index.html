@@ -1083,6 +1083,226 @@
             z-index: 2;
         }
 
+        /* Premium Offer Styles */
+        .premium-offer {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(106, 13, 131, 0.1));
+            backdrop-filter: blur(20px);
+            border: 2px solid var(--primary-gold);
+            border-radius: 30px;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(212, 175, 55, 0.2);
+        }
+
+        .premium-offer::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--primary-gold), #ff8c00, var(--primary-gold));
+            background-size: 400% 400%;
+            border-radius: 30px;
+            z-index: -1;
+            animation: gradientShift 3s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .offer-header {
+            margin-bottom: 30px;
+        }
+
+        .offer-badge {
+            background: linear-gradient(135deg, #ff8c00, var(--primary-gold));
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 12px 25px;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            animation: pulse 2s infinite;
+        }
+
+        .offer-header h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-gold);
+            margin: 0;
+        }
+
+        .pricing-section {
+            background: rgba(0,0,0,0.3);
+            border-radius: 20px;
+            padding: 25px;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .price-original {
+            font-size: 1.1rem;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .strikethrough {
+            text-decoration: line-through;
+            color: #666;
+        }
+
+        .price-special {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .price-label {
+            background: #ff4444;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .price-amount {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+        }
+
+        .price-note {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .discount-badge {
+            background: #ff2222;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        .offer-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+        }
+
+        .feature-text {
+            font-size: 0.95rem;
+            color: #e0e0e0;
+        }
+
+        .urgency-section {
+            background: rgba(255, 68, 68, 0.1);
+            border: 2px solid #ff4444;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .urgency-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ff6666;
+            margin-bottom: 5px;
+        }
+
+        .urgency-subtext {
+            font-size: 0.9rem;
+            color: #ffaaaa;
+        }
+
+        .premium-cta-button {
+            background: linear-gradient(135deg, #ff8c00, var(--primary-gold));
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 700;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px auto;
+            min-width: 320px;
+            transition: all 0.3s ease;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(255, 140, 0, 0.3);
+        }
+
+        .premium-cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 140, 0, 0.4);
+        }
+
+        .button-arrow {
+            font-size: 1.5rem;
+            animation: slideRight 1.5s infinite;
+        }
+
+        @keyframes slideRight {
+            0%, 50%, 100% { transform: translateX(0); }
+            25% { transform: translateX(5px); }
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            font-size: 0.9rem;
+            color: #b0b0b0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
         .tab.coming-soon {
             opacity: 0.7;
             cursor: not-allowed;
@@ -1413,6 +1633,31 @@
             .cta-section h3 {
                 font-size: 1.4rem;
             }
+            
+            .premium-offer {
+                margin: 30px 0;
+                padding: 30px 25px;
+            }
+            
+            .offer-header h3 {
+                font-size: 1.5rem;
+                line-height: 1.3;
+            }
+            
+            .price-amount {
+                font-size: 2.5rem;
+            }
+            
+            .offer-features {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            .premium-cta-button {
+                min-width: 280px;
+                font-size: 1.1rem;
+                padding: 16px 30px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1512,6 +1757,48 @@
             .cta-section p {
                 font-size: 0.9rem;
             }
+            
+            .premium-offer {
+                margin: 20px 0;
+                padding: 25px 15px;
+            }
+            
+            .offer-badge {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+            
+            .offer-header h3 {
+                font-size: 1.3rem;
+                line-height: 1.2;
+            }
+            
+            .price-special {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .price-amount {
+                font-size: 2.2rem;
+            }
+            
+            .feature-item {
+                padding: 12px;
+                flex-direction: column;
+                text-align: center;
+                gap: 8px;
+            }
+            
+            .premium-cta-button {
+                min-width: 250px;
+                font-size: 1rem;
+                padding: 15px 25px;
+            }
+            
+            .trust-badges {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
     </style>
 </head>
@@ -1565,6 +1852,58 @@
             <div class="cta-section">
                 <h3>✦ あなたの星座を選んで、運命の扉を開いてください ✦</h3>
                 <p>今日という日に隠された星からのメッセージを受け取り、新たな発見と気づきを得ましょう。</p>
+            </div>
+
+            <div class="premium-offer">
+                <div class="offer-header">
+                    <div class="offer-badge">🌟 特別限定オファー 🌟</div>
+                    <h3>本格的な個人鑑定書をご希望の方へ</h3>
+                </div>
+                
+                <div class="pricing-section">
+                    <div class="price-original">通常価格: <span class="strikethrough">¥5,000</span></div>
+                    <div class="price-special">
+                        <span class="price-label">先着限定価格</span>
+                        <span class="price-amount">¥980</span>
+                        <span class="price-note">（税込）</span>
+                    </div>
+                    <div class="discount-badge">80%OFF</div>
+                </div>
+
+                <div class="offer-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">📊</span>
+                        <span class="feature-text">詳細な出生チャート分析</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">💫</span>
+                        <span class="feature-text">運勢・恋愛・仕事・金運の総合鑑定</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🎯</span>
+                        <span class="feature-text">人生の重要な決断へのアドバイス</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">📱</span>
+                        <span class="feature-text">スマホでいつでも確認可能なPDF</span>
+                    </div>
+                </div>
+
+                <div class="urgency-section">
+                    <p class="urgency-text">⏰ この価格は先着<strong>100名様限定</strong>です</p>
+                    <p class="urgency-subtext">機会を逃すと通常価格での提供となります</p>
+                </div>
+
+                <button class="premium-cta-button" onclick="showPremiumOrder()">
+                    <span class="button-text">今すぐ980円で個人鑑定を申し込む</span>
+                    <span class="button-arrow">→</span>
+                </button>
+
+                <div class="trust-badges">
+                    <span class="trust-item">✅ 安心の返金保証</span>
+                    <span class="trust-item">🔒 SSL暗号化通信</span>
+                    <span class="trust-item">📞 サポート対応</span>
+                </div>
             </div>
         </section>
 
@@ -2459,6 +2798,12 @@
             compatibilityList.innerHTML = compatData.map((item, index) => 
                 `<div class="compat-item">${index + 1}位: ${item}</div>`
             ).join('');
+        }
+
+        function showPremiumOrder() {
+            alert('🌟 個人鑑定のご注文ありがとうございます！\n\n現在準備中のため、ご要望タブよりお問い合わせください。\n先着100名様の特別価格¥980でご案内いたします。');
+            // 実際の実装では決済システムやお問い合わせフォームにリダイレクト
+            showSection('feedback');
         }
 
         document.addEventListener('DOMContentLoaded', function() {
