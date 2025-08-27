@@ -2268,10 +2268,6 @@
         </section>
 
         <div class="navigation-tabs">
-            <div class="tab active" data-section="basic">✨ 無料占い</div>
-            <div class="tab" data-section="premium">👑 プレミアム</div>
-            <div class="tab coming-soon" data-section="compatibility">💕 相性占い <span class="coming-soon-badge">準備中</span></div>
-            <div class="tab coming-soon" data-section="future">🔮 未来予測 <span class="coming-soon-badge">準備中</span></div>
             <div class="tab" data-section="feedback">📝 ご要望</div>
         </div>
 
@@ -2545,91 +2541,8 @@
                 </div>
             </section>
 
-            <!-- プレミアムセクション -->
-            <section class="premium-section" id="premiumSection">
-                <div class="premium-card">
-                    <h2 class="premium-title">👑 プレミアム占い</h2>
-                    <p style="color: #e6d7c3; font-size: 1.1rem; margin-bottom: 30px;">
-                        より深く、より詳細に。あなたの運命を完全解読
-                    </p>
-                    
-                    <div class="premium-features">
-                        <div class="feature-card">
-                            <div class="feature-icon">📊</div>
-                            <div class="feature-title">詳細分析レポート</div>
-                            <div class="feature-description">
-                                30ページにわたる詳細な運勢分析。過去・現在・未来を徹底解読し、具体的なアドバイスを提供します。
-                            </div>
-                            <div class="feature-price">¥2,980</div>
-                        </div>
-                        
-                        <div class="feature-card">
-                            <div class="feature-icon">💎</div>
-                            <div class="feature-title">パーソナル鑑定</div>
-                            <div class="feature-description">
-                                生年月日と出生時刻から導き出すオーダーメイド鑑定。あなただけの特別な運命を読み解きます。
-                            </div>
-                            <div class="feature-price">¥4,980</div>
-                        </div>
-                        
-                        <div class="feature-card">
-                            <div class="feature-icon">🌟</div>
-                            <div class="feature-title">ラッキーアクション</div>
-                            <div class="feature-description">
-                                運気を最大化する具体的な行動指針。ラッキーカラー、ラッキーナンバー、開運スポットをご案内。
-                            </div>
-                            <div class="feature-price">¥1,980</div>
-                        </div>
-                    </div>
-
-                    <div class="beta-pricing">
-                        <h3>🚀 ベータ期間限定プラン</h3>
-                        <p>正式サービス開始まで、シンプルなプランでサービスをお試しいただけます。</p>
-                        
-                        <div class="pricing-plans">
-                            <div class="pricing-card popular">
-                                <div class="plan-name">ベータ版プレミアム</div>
-                                <div class="plan-price">¥500</div>
-                                <div class="plan-period">月額（通常価格の50%OFF）</div>
-                                <div class="plan-features">
-                                    <div class="plan-feature">毎日の詳細運勢</div>
-                                    <div class="plan-feature">週間運勢予測</div>
-                                    <div class="plan-feature">ラッキーアイテム情報</div>
-                                    <div class="plan-feature">基本的な相性診断</div>
-                                    <div class="plan-feature">月間運勢レポート（PDF）</div>
-                                    <div class="plan-feature">優先サポート</div>
-                                    <div class="plan-feature">正式版移行時の特典あり</div>
-                                </div>
-                                <button class="cta-button beta" onclick="showComingSoon('プレミアム')">ベータ版に参加</button>
-                                <p class="beta-note">※正式版リリース時には、より多くの機能を追加予定</p>
-                            </div>
-                        </div>
-
-                        <div class="roadmap">
-                            <h4>📅 今後の予定</h4>
-                            <div class="roadmap-item">
-                                <div class="roadmap-date">2024年4月</div>
-                                <div class="roadmap-content">相性占い機能リリース</div>
-                            </div>
-                            <div class="roadmap-item">
-                                <div class="roadmap-date">2024年5月</div>
-                                <div class="roadmap-content">未来予測機能リリース</div>
-                            </div>
-                            <div class="roadmap-item">
-                                <div class="roadmap-date">2024年6月</div>
-                                <div class="roadmap-content">VIP個人鑑定サービス開始</div>
-                            </div>
-                            <div class="roadmap-item">
-                                <div class="roadmap-date">2024年7月</div>
-                                <div class="roadmap-content">正式版サービス開始</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 相性占いセクション -->
-            <section class="compatibility-section" id="compatibilitySection">
+            <!-- 相性占いセクション（非表示） -->
+            <section class="compatibility-section" id="compatibilitySection" style="display: none;">
                 <div class="premium-card">
                     <h2 class="premium-title">💕 相性占い</h2>
                     <p style="color: #e6d7c3; font-size: 1.1rem; margin-bottom: 30px;">
@@ -2714,8 +2627,8 @@
                 </div>
             </section>
 
-            <!-- 未来予測セクション -->
-            <section class="future-section" id="futureSection">
+            <!-- 未来予測セクション（非表示） -->
+            <section class="future-section" id="futureSection" style="display: none;">
                 <div class="premium-card">
                     <h2 class="premium-title">🔮 未来予測</h2>
                     <p style="color: #e6d7c3; font-size: 1.1rem; margin-bottom: 30px;">
@@ -3047,12 +2960,8 @@
         }
 
         function showSection(sectionName) {
-            // Hide all sections
-            document.getElementById('zodiacSelection').style.display = 'none';
+            // Hide all sections except zodiac selection (main page)
             document.getElementById('fortuneSection').classList.remove('active');
-            document.getElementById('premiumSection').classList.remove('active');
-            document.getElementById('compatibilitySection').classList.remove('active');
-            document.getElementById('futureSection').classList.remove('active');
             document.getElementById('feedbackSection').classList.remove('active');
             document.getElementById('comingSoonSection').style.display = 'none';
             
@@ -3061,19 +2970,19 @@
             tabs.forEach(tab => tab.classList.remove('active'));
             
             // Show selected section and activate tab
-            if (sectionName === 'basic') {
-                document.getElementById('zodiacSelection').style.display = 'block';
-            } else if (sectionName === 'premium') {
-                document.getElementById('premiumSection').classList.add('active');
-            } else if (sectionName === 'compatibility' || sectionName === 'future') {
-                showComingSoon(sectionName);
-                return;
-            } else if (sectionName === 'feedback') {
+            if (sectionName === 'feedback') {
+                document.getElementById('zodiacSelection').style.display = 'none';
                 document.getElementById('feedbackSection').classList.add('active');
+            } else {
+                // Default to main page with zodiac selection
+                document.getElementById('zodiacSelection').style.display = 'block';
             }
             
-            // Activate clicked tab
-            event.target.classList.add('active');
+            // Activate corresponding tab
+            const activeTab = document.querySelector(`[data-section="${sectionName}"]`);
+            if (activeTab) {
+                activeTab.classList.add('active');
+            }
         }
 
         function showComingSoon(featureName) {
